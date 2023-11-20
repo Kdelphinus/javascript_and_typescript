@@ -1,3 +1,3 @@
-function welcome () {
-  return 'Hello World'
+function welcome() {
+  return 'Hello World';
 }
