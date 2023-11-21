@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id="root"></div>
+</body>
+<script
+    src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+<script
+    src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+<script type="text/babel">
+  function Btn({text, fontSize = 12}) {
+    return (
+        <button
+            style={{
+              backgroundColor: 'tomato',
+              color: 'white',
+              padding: '10px 20px',
+              border: 0,
+              borderRadius: 10,
+              fontSize,
+            }}
+        >
+          {text}
+        </button>
+    );
+  }
+
+  // props의 type을 설정하여 타입을 지키지 않으면 최소한의 경고를 뜨게 한다.
+  Btn.propTypes = {
+    text: PropTypes.string.isRequired, // 이 prop은 꼭 설정해야 한다.
+    fontSize: PropTypes.number,
+  };
+
+  function App() {
+    return (
+        <div>
+          <Btn text="Save Changes" fontSize={18}/>
+          <Btn text={18}/>
+        </div>
+    );
+  }
+
+  const root = document.getElementById('root');
+  ReactDOM.render(<App/>, root);
+</script>
+</html>
