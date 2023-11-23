@@ -1,4 +1,4 @@
-# javascript and typescript
+# Typescript Study
 
 - 생활코딩
     - [javascript](https://opentutorials.org/course/743)
